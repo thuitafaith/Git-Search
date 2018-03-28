@@ -8,12 +8,14 @@ export class GitSearchService {
 
   results: Object[];
   result_one: any;
+  result_two: any;
   repo_link: string;
   loading: boolean;
 
   constructor(private http: HttpClient) {
     this.results = [];
     this.result_one = [];
+    this.result_two = [];
     this.loading = false;
   }
   search(term: string) {
@@ -54,6 +56,19 @@ export class GitSearchService {
             },
             msg => {//Error
               //reject(msg);
+            }
+
+          ),
+        this.http.get(environment.apiRoot + "search/repositories?q={" + term + "}{&page,per_page,sort,order}")
+          .toPromise()
+          .then(
+            respo => {
+              // Success
+              this.result_two = respo['items'];
+              console.log(this.result_two)
+
+              resolve();
+
             }
 
           )

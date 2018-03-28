@@ -35,7 +35,7 @@ export class GitSearchService {
             //  this.repo_link = res['repos_url'];
             //console.log(this.results)results: Object[];
             //results.
-            console.log(this.results)
+            //console.log(this.results)
             resolve();
           },
           msg => {//Error

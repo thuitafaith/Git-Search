@@ -8,7 +8,7 @@ import { GitSearchService } from '../git-search.service'
 })
 export class SearchFormComponent implements OnInit {
 
-  constructor(private gitsearch: GitSearchService) { }
+  constructor(public gitsearch: GitSearchService) { }
   title = 'Welcome to Github Search';
 
   doSearch(term: string) {

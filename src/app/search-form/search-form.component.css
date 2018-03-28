@@ -11,3 +11,7 @@ input {
 .form-group {
   text-align: center;
 }
+
+h1 {
+  color: #ccc;
+}

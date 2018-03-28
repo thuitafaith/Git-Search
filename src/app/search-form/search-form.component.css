@@ -1,6 +1,6 @@
 button {
-  height: 3.5vh;
-  width: 12%;
+  height: auto;
+  width: auto;
   border-radius: 5px 10px;
 }
 

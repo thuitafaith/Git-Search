@@ -22,5 +22,12 @@
       <br>Repos: {{res.name}}
       <br>Owner: {{res.owner.login}}
     </ul>
+    <div>
+      <ul *ngFor="let res of gitsearch.result_two">
+        <br>Repositories:{{res.name}}
+        <br>Full name:{{res.full_name}}
+        <br><a href={{res.html_url}}>Repository name link:</a>
+      </ul>
+    </div>
   </div>
 </div>

@@ -7,3 +7,7 @@ button {
 input {
   border-radius: 5px 10px 5px 10px;
 }
+
+.form-group {
+  text-align: center;
+}

@@ -1,24 +1,26 @@
-<div class="container">
-  <div class="jumbotron" style="text-align:center">
-    <h1>
+<div style="text-align:center">
+  <h1>
   Welcome to Github Search
   </h1>
-  </div>
+</div>
+<div>
   <form class="form-group">
     <input type="search" class="form-control" placeholder="Search Here" #search>
     <button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">SEARCH</button>
 
   </form>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let res of gitsearch.results">
-      <img src="{{res.avatar_url}}" class="img-rounded">
-      <br><a href="{{res.html_url}}">NAME:{{res.login}}</a>
-      <br>Followers: {{res.followers}}
-      <br>Following: {{res.following}}
-    </li>
-  </ul>
-  <ul *ngFor="let res of gitsearch.result_one">
-    <br>Repos: {{res.name}}
-    <br>Owner: {{res.owner.login}}
-  </ul>
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let res of gitsearch.results">
+        <img src="{{res.avatar_url}}" class="img-rounded">
+        <br><a href="{{res.html_url}}">NAME:{{res.login}}</a>
+        <br>Followers: {{res.followers}}
+        <br>Following: {{res.following}}
+      </li>
+    </ul>
+    <ul *ngFor="let res of gitsearch.result_one">
+      <br>Repos: {{res.name}}
+      <br>Owner: {{res.owner.login}}
+    </ul>
+  </div>
 </div>

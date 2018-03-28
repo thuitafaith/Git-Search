@@ -37,7 +37,7 @@ export class GitSearchService {
             resolve();
           },
           msg => {//Error
-            reject(msg);
+            //  reject(msg);
           }
 
         ),
@@ -53,7 +53,7 @@ export class GitSearchService {
               resolve();
             },
             msg => {//Error
-              reject(msg);
+              //reject(msg);
             }
 
           )
